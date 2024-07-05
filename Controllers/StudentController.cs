@@ -8,10 +8,19 @@ namespace CollegeApp.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
+        private readonly ILogger<StudentController> _logger;
+
+        public StudentController(ILogger<StudentController> logger)
+        {
+            _logger = logger;
+        }
+
+
         [HttpGet("All")]
         [ProducesResponseType(200)]
         public ActionResult<IEnumerable<StudentDTO>> GetStudents()
         {
+            _logger.LogInformation("GetStudents method started");
             var students = CollegeRepository.Students.Select(s => new StudentDTO()
             {
                 Id = s.Id,
@@ -31,11 +40,19 @@ namespace CollegeApp.Controllers
         [ProducesResponseType(404)]
         public ActionResult<StudentDTO> GetStudentById(int id)
         {
-            if (id <= 0) return BadRequest(); 
+            if (id <= 0)
+            {
+                _logger.LogWarning("Bad request");
+                return BadRequest();
+            }
 
             var student = CollegeRepository.Students.Where(n => n.Id == id).FirstOrDefault();
 
-            if (student == null) return NotFound($"Student with id {id} was not found.");
+            if (student == null)
+            {
+                _logger.LogError("Student not found with given Id");
+                return NotFound($"Student with id {id} was not found.");
+            }
 
             var studentDTO = new StudentDTO
             {
