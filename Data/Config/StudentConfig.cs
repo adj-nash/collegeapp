@@ -15,14 +15,14 @@ namespace CollegeApp.Data.Config
 
             builder.Property(n => n.StudentName).IsRequired().HasMaxLength(250);
             builder.Property(n => n.Address).IsRequired(false).HasMaxLength(500);
-            builder.Property(n => n.Email).IsRequired().HasMaxLength(250);
+            builder.Property(n => n.Email).IsRequired(false).HasMaxLength(250);
 
             builder.HasData(new List<Student>()
             {
                 new Student
                 { 
                     Id = 1, 
-                    StudentName = "Alex", 
+                    StudentName = "Alexander Nash", 
                     Address = "Nottingham", 
                     DOB = new DateTime(1990, 09, 05), 
                     Email="alex_nash@live.co.uk" }

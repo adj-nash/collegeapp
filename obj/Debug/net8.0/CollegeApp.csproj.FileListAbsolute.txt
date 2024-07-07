@@ -166,3 +166,6 @@ C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\runtimes\win-
 C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\alex_\OneDrive\Desktop\dotnet\CollegeApp\bin\Debug\net8.0\AutoMapper.dll
